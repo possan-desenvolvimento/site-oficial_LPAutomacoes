@@ -1,0 +1,125 @@
+{
+    "nav": {
+        "home": "Início",
+        "sobre": "Sobre",
+        "projetos": "Projetos",
+        "contato": "Contato"
+    },
+    "footer": {
+        "rights": "Todos os direitos reservados"
+    },
+    "sobre": {
+        "quote": "Tecnologia que transforma negócios",
+        "titulo": "LP <span class=\"gradient-text\">Automações & Soluções</span>",
+        "subtitulo": "Tecnologia que impulsiona negócios",
+        "texto1": "A LP Automações & Soluções nasceu com uma missão clara: democratizar o acesso à tecnologia de ponta para pequenas, médias e grandes empresas. Acreditamos que a inovação não deve ser um privilégio, mas sim uma ferramenta acessível para todos que desejam crescer e se destacar no mercado digital.",
+        "texto2": "Nossa especialidade vai muito além do desenvolvimento de sites profissionais. Criamos soluções completas que automatizam processos, otimizam atendimentos e transformam a maneira como sua empresa se relaciona com clientes e parceiros.",
+        "feature1": {
+            "titulo": "Sites que Revolucionam",
+            "desc": "Desenvolvemos sites modernos, responsivos e otimizados para conversão, que dão credibilidade e autoridade à sua marca."
+        },
+        "feature2": {
+            "titulo": "Automação WhatsApp",
+            "desc": "Atendimento 24/7 com chatbots inteligentes, disparos automáticos e gestão de múltiplos números. Reduza o tempo de resposta em até 70%."
+        },
+        "feature3": {
+            "titulo": "Automação Instagram",
+            "desc": "Responda comentários automaticamente, envie mensagens diretas personalizadas e gerencie interações de forma inteligente."
+        },
+        "feature4": {
+            "titulo": "Google Meu Negócio",
+            "desc": "Otimização completa da sua presença local, gestão de avaliações e posts regulares para aumentar sua visibilidade nas buscas."
+        },
+        "diferenciais": {
+            "titulo": "Por que escolher a LP Automações?"
+        },
+        "diferencial1": "Soluções Sob Medida",
+        "diferencial2": "Suporte Especializado",
+        "diferencial3": "Foco em Resultados",
+        "diferencial4": "Segurança e Confiança"
+    },
+    "projetos": {
+        "titulo": "Nossos Projetos",
+        "subtitulo": "Soluções personalizadas que transformam negócios",
+        "filtros": {
+            "todos": "Todos",
+            "sites": "Sites",
+            "sistemas": "Sistemas",
+            "whatsapp": "WhatsApp",
+            "instagram": "Instagram"
+        },
+        "projeto1": {
+            "ver": "Ver Detalhes",
+            "titulo": "Site Corporativo",
+            "desc": "Site moderno e responsivo para empresa de tecnologia"
+        },
+        "projeto2": {
+            "ver": "Ver Detalhes",
+            "titulo": "Sistema de Estoque",
+            "desc": "Controle completo de estoque, vendas e relatórios"
+        },
+        "projeto3": {
+            "ver": "Ver Detalhes",
+            "titulo": "Dashboard WhatsApp",
+            "desc": "Automação completa de atendimento e disparos"
+        },
+        "projeto4": {
+            "ver": "Ver Detalhes",
+            "titulo": "Bot para Instagram",
+            "desc": "Automação de respostas e interações no Instagram"
+        },
+        "projeto5": {
+            "ver": "Ver Detalhes",
+            "titulo": "E-commerce Completo",
+            "desc": "Loja virtual com carrinho e pagamentos integrados"
+        },
+        "projeto6": {
+            "ver": "Ver Detalhes",
+            "titulo": "ERP Personalizado",
+            "desc": "Sistema de gestão empresarial completo"
+        }
+    },
+    "clientes": {
+        "titulo": "Empresas que Confiam em Nosso Trabalho",
+        "subtitulo": "Mais de 50+ empresas atendidas em todo Brasil",
+        "setor1": "Projeto e Print",
+        "setor2": "Pet Shop Cantinho dos Bichos",
+        "setor3": "Cynd Fit Revendedora de produtos da Herbalife",        
+        "setor4": "Mazziote Calçados",
+        "setor5": "Impercol Impermeabilização",
+        "setor6": "MK Impermeabilização",
+        "qtd1": "1+ Lojas",
+        "qtd2": "1+ Estabelecimentos",
+        "qtd3": "1+ Lojas",
+        "qtd4": "1+ Estabelecimentos",
+        "qtd5": "20+ Prestadores de Serviços",
+        "qtd6": "20+ Prestadores de Serviços"
+    },
+    "contato": {
+        "titulo": "Entre em Contato",
+        "subtitulo": "Estamos prontos para transformar seu negócio",
+        "endereco": {
+            "titulo": "Nosso Endereço",
+            "btn": "Ver no Mapa"
+        },
+        "whatsapp": {
+            "titulo": "WhatsApp",
+            "sub": "Atendimento rápido e personalizado"
+        },
+        "instagram": {
+            "titulo": "Instagram",
+            "sub": "Acompanhe nossos projetos e novidades"
+        },
+        "google": {
+            "titulo": "Google Meu Negócio",
+            "sub": "Avalie nossa empresa no Google"
+        },
+        "mapa": {
+            "titulo": "Onde Estamos"
+        },
+        "horario": {
+            "titulo": "Horário de Atendimento:",
+            "desc": "Segunda a Sexta: 9h às 18h | Sábado: 9h às 12h"
+        }
+    }
+}

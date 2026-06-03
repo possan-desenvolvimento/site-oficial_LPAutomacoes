@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP Automações - Contato</title>
+    
+    <!-- CSS -->    
+    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="stylesheet" href="../css/light-theme.css" id="theme-style">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>LP <span class="highlight">Automações</span></span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Início</a></li>
+                    <li><a href="sobre.html" class="nav-link" data-i18n="nav.sobre">Sobre</a></li>
+                    <li><a href="projetos.html" class="nav-link" data-i18n="nav.projetos">Projetos</a></li>
+                    <li><a href="contato.html" class="nav-link active" data-i18n="nav.contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="control-btn">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="language-selector">
+                    <button class="lang-btn" data-lang="pt-BR" title="Português">🇧🇷</button>
+                    <button class="lang-btn" data-lang="en-US" title="English">🇺🇸</button>
+                    <button class="lang-btn" data-lang="es-ES" title="Español">🇪🇸</button>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contato Section -->
+    <section class="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="contato.titulo">Entre em <span class="gradient-text">Contato</span></h2>
+                <p data-i18n="contato.subtitulo">Estamos prontos para transformar seu negócio</p>
+            </div>
+
+            <div class="contato-grid">
+                <!-- Lado Esquerdo - Informações -->
+                <div class="contato-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 data-i18n="contato.endereco.titulo">Nosso Endereço</h3>
+                        <p>R: Francisco de Almeida, 179</p>
+                        <p>Itapevi - São Paulo</p>
+                        <p>CEP: 06657-130</p>
+                        <a href="https://maps.google.com/?q=Francisco+de+Almeida,179,Itapevi,SP" target="_blank" class="btn-mapa" data-i18n="contato.endereco.btn">Ver no Mapa</a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3 data-i18n="contato.whatsapp.titulo">WhatsApp</h3>
+                        <p data-i18n="contato.whatsapp.sub">Atendimento rápido e personalizado</p>
+                        <a href="https://wa.me/551151073003?text=Olá!%20Vim%20pelo%20site%20LP%20Automações%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços." target="_blank" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> (11) 5107-3003
+                        </a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3 data-i18n="contato.instagram.titulo">Instagram</h3>
+                        <p data-i18n="contato.instagram.sub">Acompanhe nossos projetos e novidades</p>
+                        <a href="https://www.instagram.com/lpautomacoesesolucoes/" target="_blank" class="btn-instagram">
+                            <i class="fab fa-instagram"></i> @lpautomacoesesolucoes
+                        </a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h3 data-i18n="contato.google.titulo">Google Meu Negócio</h3>
+                        <p data-i18n="contato.google.sub">Avalie nossa empresa no Google</p>
+                        <a href="https://share.google/zbVt1het4mjmB38Cn" target="_blank" class="btn-google">
+                            <i class="fab fa-google"></i> Avaliar no Google
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lado Direito - Mapa -->
+                <div class="contato-mapa">
+                    <div class="mapa-card">
+                        <h3 data-i18n="contato.mapa.titulo">Onde Estamos</h3>
+                        <div class="mapa-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.024356957837!2d-46.938513!3d-23.443164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cec8b5d3e9d0e9%3A0x0!2zR8OjbWVzLCBSdWEgRnJhbmNpc2NvIGRlIEFsbWVpZGEsIDE3OSAtIEl0YXBldmksIFNQLCAwNjY1Ny0xMzA!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="horario-atendimento">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong data-i18n="contato.horario.titulo">Horário de Atendimento:</strong>
+                                <p data-i18n="contato.horario.desc">Segunda a Sexta: 9h às 18h | Sábado: 9h às 12h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 LP Automações e Soluções - <span data-i18n="footer.rights">Todos os direitos reservados</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->    
+    <script src="../js/contato.js"></script> 
+</body>
+</html>

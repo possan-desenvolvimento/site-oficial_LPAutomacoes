@@ -1,0 +1,125 @@
+{
+    "nav": {
+        "home": "Home",
+        "sobre": "About",
+        "projetos": "Projects",
+        "contato": "Contact"
+    },
+    "footer": {
+        "rights": "All rights reserved"
+    },
+    "sobre": {
+        "quote": "Technology that transforms businesses",
+        "titulo": "LP <span class=\"gradient-text\">Automations & Solutions</span>",
+        "subtitulo": "Technology that drives business",
+        "texto1": "LP Automations & Solutions was born with a clear mission: to democratize access to cutting-edge technology for small, medium and large companies. We believe that innovation should not be a privilege, but an accessible tool for everyone who wants to grow and stand out in the digital market.",
+        "texto2": "Our specialty goes far beyond developing professional websites. We create complete solutions that automate processes, optimize service and transform the way your company relates to customers and partners.",
+        "feature1": {
+            "titulo": "Revolutionary Websites",
+            "desc": "We develop modern, responsive websites optimized for conversion, giving credibility and authority to your brand."
+        },
+        "feature2": {
+            "titulo": "WhatsApp Automation",
+            "desc": "24/7 service with intelligent chatbots, automatic dispatches and management of multiple numbers. Reduce response time by up to 70%."
+        },
+        "feature3": {
+            "titulo": "Instagram Automation",
+            "desc": "Automatically reply to comments, send personalized direct messages and intelligently manage interactions."
+        },
+        "feature4": {
+            "titulo": "Google My Business",
+            "desc": "Complete optimization of your local presence, review management and regular posts to increase your visibility in searches."
+        },
+        "diferenciais": {
+            "titulo": "Why choose LP Automations?"
+        },
+        "diferencial1": "Tailored Solutions",
+        "diferencial2": "Specialized Support",
+        "diferencial3": "Focus on Results",
+        "diferencial4": "Security and Trust"
+    },
+    "projetos": {
+        "titulo": "Our Projects",
+        "subtitulo": "Custom solutions that transform businesses",
+        "filtros": {
+            "todos": "All",
+            "sites": "Websites",
+            "sistemas": "Systems",
+            "whatsapp": "WhatsApp",
+            "instagram": "Instagram"
+        },
+        "projeto1": {
+            "ver": "View Details",
+            "titulo": "Corporate Website",
+            "desc": "Modern responsive website for tech company"
+        },
+        "projeto2": {
+            "ver": "View Details",
+            "titulo": "Inventory System",
+            "desc": "Complete stock control, sales and reports"
+        },
+        "projeto3": {
+            "ver": "View Details",
+            "titulo": "WhatsApp Dashboard",
+            "desc": "Complete automation of service and sending"
+        },
+        "projeto4": {
+            "ver": "View Details",
+            "titulo": "Instagram Bot",
+            "desc": "Automated responses and interactions on Instagram"
+        },
+        "projeto5": {
+            "ver": "View Details",
+            "titulo": "Complete E-commerce",
+            "desc": "Virtual store with integrated cart and payments"
+        },
+        "projeto6": {
+            "ver": "View Details",
+            "titulo": "Custom ERP",
+            "desc": "Complete business management system"
+        }
+    },
+    "clientes": {
+        "titulo": "Companies That Trust Our Work",
+        "subtitulo": "Over 50+ companies served across Brazil",
+        "setor1": "Project and Print",
+        "setor2": "Pet Shops",
+        "setor3": "Cynd Fit Herbalife Product Reseller",
+        "setor4": "Mazziote Shoes",
+        "setor5": "Impercol Waterproofing",
+        "setor6": "MK Waterproofing",
+        "qtd1": "1+ Stores",
+        "qtd2": "1+ Establishments",
+        "qtd3": "1+ Lojas",
+        "qtd4": "1+ Establishments",
+        "qtd5": "20+ Prestadores de Serviços",
+        "qtd6": "20+ Prestadores de Serviços"
+    },
+    "contato": {
+        "titulo": "Get in Touch",
+        "subtitulo": "We are ready to transform your business",
+        "endereco": {
+            "titulo": "Our Address",
+            "btn": "View on Map"
+        },
+        "whatsapp": {
+            "titulo": "WhatsApp",
+            "sub": "Fast and personalized service"
+        },
+        "instagram": {
+            "titulo": "Instagram",
+            "sub": "Follow our projects and news"
+        },
+        "google": {
+            "titulo": "Google My Business",
+            "sub": "Rate our company on Google"
+        },
+        "mapa": {
+            "titulo": "Where We Are"
+        },
+        "horario": {
+            "titulo": "Business Hours:",
+            "desc": "Monday to Friday: 9am to 6pm | Saturday: 9am to 12pm"
+        }
+    }
+}

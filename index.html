@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP Automações e Soluções</title>
+    
+    <!-- CSS -->    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="theme-style">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>LP <span class="highlight">Automações</span></span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Início</a></li>
+                    <li><a href="pages/sobre.html" class="nav-link" data-i18n="nav.sobre">Sobre</a></li>
+                    <li><a href="pages/projetos.html" class="nav-link" data-i18n="nav.projetos">Projetos</a></li>
+                    <li><a href="pages/contato.html" class="nav-link" data-i18n="nav.contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="control-btn">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="language-selector">
+                    <button class="lang-btn" data-lang="pt-BR" title="Português">🇧🇷</button>
+                    <button class="lang-btn" data-lang="en-US" title="English">🇺🇸</button>
+                    <button class="lang-btn" data-lang="es-ES" title="Español">🇪🇸</button>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section com Slides Automáticos -->
+    <section class="hero">
+        <!-- Slide 1 -->
+        <div class="hero-slide active" data-slide="1">
+            <img class="slide-bg" src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Tecnologia">
+            <div class="hero-content">
+                <h1 data-i18n="hero.slide1.titulo">LP <span class="gradient-text">Automações & Soluções</span></h1>
+                <div class="typing-container">
+                    <span data-i18n="hero.typing.prefix">Especialistas em</span>
+                    <span id="typed-text"></span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="pages/contato.html" class="btn btn-primary" data-i18n="hero.btn_contato">Fale Conosco</a>                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide" data-slide="2">
+            <img class="slide-bg" src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="WhatsApp">
+            <div class="hero-content">
+                <h1 data-i18n="hero.slide2.titulo">Automação <span class="gradient-text">WhatsApp</span></h1>
+                <p data-i18n="hero.slide2.desc">Atendimento 24/7 com inteligência artificial</p>
+                <div class="hero-buttons">
+                    <a href="pages/contato.html" class="btn btn-primary" data-i18n="hero.btn_contato">Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide" data-slide="3">
+            <img class="slide-bg" src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Sistemas">
+            <div class="hero-content">
+                <h1 data-i18n="hero.slide3.titulo">Sistemas <span class="gradient-text">Personalizados</span></h1>
+                <p data-i18n="hero.slide3.desc">Controle de estoque, vendas e gestão empresarial</p>
+                <div class="hero-buttons">
+                    <a href="pages/contato.html" class="btn btn-primary" data-i18n="hero.btn_contato">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="hero-slide" data-slide="4">
+            <img class="slide-bg" src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Google">
+            <div class="hero-content">
+                <h1 data-i18n="hero.slide4.titulo">Google <span class="gradient-text">Meu Negócio</span></h1>
+                <p data-i18n="hero.slide4.desc">Destaque sua empresa nas buscas locais</p>
+                <div class="hero-buttons">
+                    <a href="pages/contato.html" class="btn btn-primary" data-i18n="hero.btn_contato">Quero Mais Visibilidade</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="hero-slide" data-slide="5">
+            <img class="slide-bg" src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Resultados">
+            <div class="hero-content">
+                <h1 data-i18n="hero.slide5.titulo">Resultados <span class="gradient-text">Reais</span></h1>
+                <p data-i18n="hero.slide5.desc">Transformamos seu negócio com tecnologia</p>
+                <div class="hero-buttons">
+                    <a href="pages/contato.html" class="btn btn-primary" data-i18n="hero.btn_contato">Quero Resultados</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dots de Navegação (sem setas) -->
+        <div class="slide-controls">
+            <div class="slide-dot active" data-slide="1"></div>
+            <div class="slide-dot" data-slide="2"></div>
+            <div class="slide-dot" data-slide="3"></div>
+            <div class="slide-dot" data-slide="4"></div>
+            <div class="slide-dot" data-slide="5"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 LP Automações e Soluções - <span data-i18n="footer.rights">Todos os direitos reservados</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->    
+    <script src="js/index.js"></script>
+</body>
+</html>

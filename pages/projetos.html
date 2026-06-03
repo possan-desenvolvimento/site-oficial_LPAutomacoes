@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP Automações - Projetos</title>
+    
+    <!-- CSS -->    
+    <link rel="stylesheet" href="../css/projetos.css">
+    <link rel="stylesheet" href="../css/light-theme.css" id="theme-style">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>LP <span class="highlight">Automações</span></span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Início</a></li>
+                    <li><a href="sobre.html" class="nav-link" data-i18n="nav.sobre">Sobre</a></li>
+                    <li><a href="projetos.html" class="nav-link active" data-i18n="nav.projetos">Projetos</a></li>
+                    <li><a href="contato.html" class="nav-link" data-i18n="nav.contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="control-btn">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="language-selector">
+                    <button class="lang-btn" data-lang="pt-BR" title="Português">🇧🇷</button>
+                    <button class="lang-btn" data-lang="en-US" title="English">🇺🇸</button>
+                    <button class="lang-btn" data-lang="es-ES" title="Español">🇪🇸</button>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projetos Section -->
+    <section class="projetos">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="projetos.titulo">Nossos <span class="gradient-text">Projetos</span></h2>
+                <p data-i18n="projetos.subtitulo">Soluções personalizadas que transformam negócios</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filtros">
+                <button class="filtro-btn active" data-filter="all" data-i18n="projetos.filtros.todos">Todos</button>
+                <button class="filtro-btn" data-filter="sites" data-i18n="projetos.filtros.sites">Sites</button>
+                <button class="filtro-btn" data-filter="sistemas" data-i18n="projetos.filtros.sistemas">Sistemas</button>
+                <button class="filtro-btn" data-filter="whatsapp" data-i18n="projetos.filtros.whatsapp">WhatsApp</button>
+                <button class="filtro-btn" data-filter="instagram" data-i18n="projetos.filtros.instagram">Instagram</button>
+            </div>
+
+            <!-- Cards de Projetos -->
+            <div class="projetos-grid">
+                <!-- Projeto 1 - Site Profissional -->
+                <div class="projeto-card" data-category="sites">
+                    <div class="card-img">
+                        <img src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Site Profissional">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <p data-i18n="projetos.projeto1.ver">Ver Detalhes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-categoria" data-i18n="projetos.filtros.sites">Sites</span>
+                        <h3 data-i18n="projetos.projeto1.titulo">Site Corporativo</h3>
+                        <p data-i18n="projetos.projeto1.desc">Site moderno e responsivo para empresa de tecnologia</p>
+                        <div class="card-tech">                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 - Sistema de Estoque -->
+                <div class="projeto-card" data-category="sistemas">
+                    <div class="card-img">
+                        <img src="https://images.pexels.com/photos/4482901/pexels-photo-4482901.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sistema de Estoque">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <p data-i18n="projetos.projeto2.ver">Ver Detalhes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-categoria" data-i18n="projetos.filtros.sistemas">Sistemas</span>
+                        <h3 data-i18n="projetos.projeto2.titulo">Sistema de Estoque</h3>
+                        <p data-i18n="projetos.projeto2.desc">Controle completo de estoque, vendas e relatórios</p>
+                        <div class="card-tech">                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 - Automação WhatsApp -->
+                <div class="projeto-card" data-category="whatsapp">
+                    <div class="card-img">
+                        <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Automação WhatsApp">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <p data-i18n="projetos.projeto3.ver">Ver Detalhes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-categoria" data-i18n="projetos.filtros.whatsapp">WhatsApp</span>
+                        <h3 data-i18n="projetos.projeto3.titulo">Dashboard WhatsApp</h3>
+                        <p data-i18n="projetos.projeto3.desc">Automação completa de atendimento e disparos</p>
+                        <div class="card-tech">                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 - Automação Instagram -->
+                <div class="projeto-card" data-category="instagram">
+                    <div class="card-img">
+                        <img src="https://images.pexels.com/photos/6567367/pexels-photo-6567367.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Automação Instagram">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <p data-i18n="projetos.projeto4.ver">Ver Detalhes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-categoria" data-i18n="projetos.filtros.instagram">Instagram</span>
+                        <h3 data-i18n="projetos.projeto4.titulo">Bot para Instagram</h3>
+                        <p data-i18n="projetos.projeto4.desc">Automação de respostas e interações no Instagram</p>
+                        <div class="card-tech">                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 5 - Site E-commerce -->
+                <div class="projeto-card" data-category="sites">
+                    <div class="card-img">
+                        <img src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=600" alt="E-commerce">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <p data-i18n="projetos.projeto5.ver">Ver Detalhes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-categoria" data-i18n="projetos.filtros.sites">Sites</span>
+                        <h3 data-i18n="projetos.projeto5.titulo">E-commerce Completo</h3>
+                        <p data-i18n="projetos.projeto5.desc">Loja virtual com carrinho e pagamentos integrados</p>
+                        <div class="card-tech">                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 6 - Sistema de Gestão -->
+                <div class="projeto-card" data-category="sistemas">
+                    <div class="card-img">
+                        <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sistema de Gestão">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <p data-i18n="projetos.projeto6.ver">Ver Detalhes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-categoria" data-i18n="projetos.filtros.sistemas">Sistemas</span>
+                        <h3 data-i18n="projetos.projeto6.titulo">ERP Personalizado</h3>
+                        <p data-i18n="projetos.projeto6.desc">Sistema de gestão empresarial completo</p>
+                        <div class="card-tech">                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clientes Section -->
+            <div class="clientes-section">
+                <div class="section-header">
+                    <h2 data-i18n="clientes.titulo">Empresas que <span class="gradient-text">Confiam</span> em Nosso Trabalho</h2>
+                    <p data-i18n="clientes.subtitulo">Mais de 50+ empresas atendidas em todo Brasil</p>
+                </div>
+
+                <div class="clientes-grid">
+                    <div class="cliente-card">
+                        <div class="cliente-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4 data-i18n="clientes.setor1">Projeto e Print</h4>
+                        <p data-i18n="clientes.qtd1">1+ Lojas</p>
+                    </div>
+
+                    <div class="cliente-card">
+                        <div class="cliente-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h4 data-i18n="clientes.setor2">Pet Shop Cantinho dos bichos </h4>
+                        <p data-i18n="clientes.qtd2">1+ Estabelecimentos</p>
+                    </div>
+
+                    <div class="cliente-card">
+                        <div class="cliente-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h4 data-i18n="clientes.setor3">Cynd Fit Revendedora de produtos da Herbalife</h4>
+                        <p data-i18n="clientes.qtd3">1+ Lojas</p>
+                    </div>
+
+                    <div class="cliente-card">
+                        <div class="cliente-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4 data-i18n="clientes.setor4">Mazziote Calçados</h4>
+                        <p data-i18n="clientes.qtd4">1+ Estabelecimentos</p>
+                    </div>
+
+                    <div class="cliente-card">
+                        <div class="cliente-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4 data-i18n="clientes.setor5">Impercol Impermeabilização</h4>
+                        <p data-i18n="clientes.qtd5">20+ Prestadores de Serviços</p>
+                    </div>
+
+                    <div class="cliente-card">
+                        <div class="cliente-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4 data-i18n="clientes.setor6">MK Impermeabilização</h4>
+                        <p data-i18n="clientes.qtd6">20+ Prestadores de Serviços</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 LP Automações e Soluções - <span data-i18n="footer.rights">Todos os direitos reservados</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->    
+    <script src="../js/projetos.js"></script> 
+</body>
+</html>
