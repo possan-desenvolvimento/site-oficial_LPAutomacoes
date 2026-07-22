@@ -129,8 +129,10 @@ function setTheme(theme) {
     if (themeLink) {
         themeLink.href = `css/${theme}-theme.css`;
     }
+    document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     
+    // Atualiza o ícone do botão principal
     if (themeIcon) {
         if (theme === 'dark') {
             themeIcon.classList.remove('fa-sun');

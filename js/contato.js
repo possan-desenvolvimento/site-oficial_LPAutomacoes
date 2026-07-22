@@ -1,19 +1,17 @@
-// ========== MENU MOBILE COM CONTROLES CLONADOS ==========
+// ========================================
+// 1. MENU MOBILE COM CONTROLES CLONADOS
+// ========================================
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navMenu = document.querySelector('.nav-menu');
 const body = document.body;
 
-// Função para clonar os controles (tema e idioma) para dentro do menu mobile
 function addControlsToMobileMenu() {
-    // Só adiciona se estiver no mobile (largura <= 768px)
     if (window.innerWidth > 768) return;
     
     const navControls = document.querySelector('.nav-controls');
     const mobileNavMenu = document.querySelector('.nav-menu');
     
-    // Verifica se existe e se já não foi adicionado
     if (navControls && mobileNavMenu && !mobileNavMenu.querySelector('.mobile-nav-controls')) {
-        // Clona os controles
         const clonedControls = navControls.cloneNode(true);
         clonedControls.classList.add('mobile-nav-controls');
         clonedControls.style.display = 'flex';
@@ -27,7 +25,6 @@ function addControlsToMobileMenu() {
         
         mobileNavMenu.appendChild(clonedControls);
         
-        // Reatribuir evento do tema no clone
         const clonedThemeBtn = clonedControls.querySelector('#theme-toggle');
         if (clonedThemeBtn) {
             clonedThemeBtn.addEventListener('click', () => {
@@ -37,7 +34,6 @@ function addControlsToMobileMenu() {
             });
         }
         
-        // Reatribuir eventos dos idiomas no clone
         const clonedLangBtns = clonedControls.querySelectorAll('.lang-btn');
         clonedLangBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -47,7 +43,6 @@ function addControlsToMobileMenu() {
     }
 }
 
-// Função para remover controles do menu mobile
 function removeMobileControls() {
     const mobileControls = document.querySelector('.mobile-nav-controls');
     if (mobileControls) {
@@ -119,7 +114,9 @@ window.addEventListener('resize', () => {
     }
 });
 
-// ========== TEMA ==========
+// ========================================
+// 2. TEMA
+// ========================================
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = themeToggle?.querySelector('i');
 
@@ -128,6 +125,7 @@ function setTheme(theme) {
     if (themeLink) {
         themeLink.href = `../css/${theme}-theme.css`;
     }
+    document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     
     if (themeIcon) {
@@ -167,7 +165,9 @@ if (themeToggle) {
     });
 }
 
-// ========== IDIOMAS ==========
+// ========================================
+// 3. IDIOMAS
+// ========================================
 const languages = {
     'pt-BR': '../locales/pt-BR.json',
     'en-US': '../locales/en-US.json',
@@ -223,7 +223,9 @@ function initLanguage() {
     updateLanguage(currentLang);
 }
 
-// ========== ANIMAÇÃO DE ENTRADA ==========
+// ========================================
+// 4. ANIMAÇÃO DE ENTRADA (ATUALIZADO)
+// ========================================
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -238,15 +240,18 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.info-card, .mapa-card').forEach(el => {
+// Animar os cards de contato (agora com a nova classe)
+document.querySelectorAll('.contato-card, .foto-container').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'all 0.6s ease';
     observer.observe(el);
 });
 
-// ========== MENSAGEM PERSONALIZADA DO WHATSAPP ==========
-document.querySelectorAll('.btn-whatsapp').forEach(btn => {
+// ========================================
+// 5. MENSAGEM PERSONALIZADA DO WHATSAPP
+// ========================================
+document.querySelectorAll('.btn-contato.whatsapp').forEach(btn => {
     btn.addEventListener('click', function(e) {
         const message = encodeURIComponent('Olá! Vim pelo site LP Automações e gostaria de mais informações sobre os serviços.');
         const phone = '551151073003';
@@ -256,7 +261,9 @@ document.querySelectorAll('.btn-whatsapp').forEach(btn => {
     });
 });
 
-// ========== HEADER SCROLL ==========
+// ========================================
+// 6. HEADER SCROLL
+// ========================================
 const header = document.querySelector('.header');
 if (header) {
     window.addEventListener('scroll', () => {
@@ -268,7 +275,9 @@ if (header) {
     });
 }
 
-// ========== INICIALIZAÇÃO ==========
+// ========================================
+// 7. INICIALIZAÇÃO
+// ========================================
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initLanguage();

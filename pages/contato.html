@@ -20,7 +20,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <i class="fas fa-bolt"></i>
+                <img src="../assets/logo-lp.png" alt="LP Automações" class="logo-img">
                 <span>LP <span class="highlight">Automações</span></span>
             </div>
             <nav class="nav-menu">
@@ -56,74 +56,104 @@
             </div>
 
             <div class="contato-grid">
-                <!-- Lado Esquerdo - Informações -->
-                <div class="contato-info">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                <!-- Lado Esquerdo - Foto -->
+                <div class="contato-foto">
+                    <div class="foto-container">
+                        <img src="../assets/eu-tatto.jpeg" alt="Leonardo Possan - CEO LP Automações">
+                        <div class="foto-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-quote-right"></i>
+                                <p>"Tecnologia que transforma negócios"</p>
+                            </div>
                         </div>
-                        <h3 data-i18n="contato.endereco.titulo">Nosso Endereço</h3>
-                        <p>R: Francisco de Almeida, 179</p>
-                        <p>Itapevi - São Paulo</p>
-                        <p>CEP: 06657-130</p>
-                        <a href="https://maps.google.com/?q=Francisco+de+Almeida,179,Itapevi,SP" target="_blank" class="btn-mapa" data-i18n="contato.endereco.btn">Ver no Mapa</a>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <h3 data-i18n="contato.whatsapp.titulo">WhatsApp</h3>
-                        <p data-i18n="contato.whatsapp.sub">Atendimento rápido e personalizado</p>
-                        <a href="https://wa.me/551151073003?text=Olá!%20Vim%20pelo%20site%20LP%20Automações%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços." target="_blank" class="btn-whatsapp">
-                            <i class="fab fa-whatsapp"></i> (11) 5107-3003
-                        </a>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <h3 data-i18n="contato.instagram.titulo">Instagram</h3>
-                        <p data-i18n="contato.instagram.sub">Acompanhe nossos projetos e novidades</p>
-                        <a href="https://www.instagram.com/lpautomacoesesolucoes/" target="_blank" class="btn-instagram">
-                            <i class="fab fa-instagram"></i> @lpautomacoesesolucoes
-                        </a>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fab fa-google"></i>
-                        </div>
-                        <h3 data-i18n="contato.google.titulo">Google Meu Negócio</h3>
-                        <p data-i18n="contato.google.sub">Avalie nossa empresa no Google</p>
-                        <a href="https://share.google/zbVt1het4mjmB38Cn" target="_blank" class="btn-google">
-                            <i class="fab fa-google"></i> Avaliar no Google
-                        </a>
                     </div>
                 </div>
 
-                <!-- Lado Direito - Mapa -->
-                <div class="contato-mapa">
-                    <div class="mapa-card">
-                        <h3 data-i18n="contato.mapa.titulo">Onde Estamos</h3>
-                        <div class="mapa-container">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.024356957837!2d-46.938513!3d-23.443164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cec8b5d3e9d0e9%3A0x0!2zR8OjbWVzLCBSdWEgRnJhbmNpc2NvIGRlIEFsbWVpZGEsIDE3OSAtIEl0YXBldmksIFNQLCAwNjY1Ny0xMzA!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
-                                width="100%" 
-                                height="400" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                        <div class="horario-atendimento">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <strong data-i18n="contato.horario.titulo">Horário de Atendimento:</strong>
-                                <p data-i18n="contato.horario.desc">Segunda a Sexta: 9h às 18h | Sábado: 9h às 12h</p>
+                <!-- Lado Direito - Cards de Contato -->
+                <div class="contato-cards">
+                    <!-- Card 1: Endereço -->
+                    <div class="contato-card">
+                        <div class="card-header">
+                            <div class="card-icon endereco">
+                                <i class="fas fa-map-marker-alt"></i>
                             </div>
+                            <h3 data-i18n="contato.endereco.titulo">Nosso Endereço</h3>
+                        </div>
+                        <div class="card-content">
+                            <p><span class="destaque">Rua:</span> Francisco de Almeida, 179</p>
+                            <p><span class="destaque">Bairro:</span> Itapevi - São Paulo</p>
+                            <p><span class="destaque">CEP:</span> 06657-130</p>
+                            <a href="https://maps.google.com/?q=Francisco+de+Almeida,179,Itapevi,SP" target="_blank" class="btn-contato mapa">
+                                <i class="fas fa-location-dot"></i> Ver no Mapa
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: WhatsApp -->
+                    <div class="contato-card">
+                        <div class="card-header">
+                            <div class="card-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h3 data-i18n="contato.whatsapp.titulo">WhatsApp</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Atendimento rápido e personalizado</p>
+                            <p><span class="destaque">📱 (11)96480-1185</span></p>
+                            <a href="https://wa.me/5511964801185" target="_blank" class="btn-contato whatsapp">
+                                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Instagram -->
+                    <div class="contato-card">
+                        <div class="card-header">
+                            <div class="card-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <h3 data-i18n="contato.instagram.titulo">Instagram</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Acompanhe nossos projetos e novidades</p>
+                            <p><span class="destaque">@lpautomacoesesolucoes</span></p>
+                            <a href="https://www.instagram.com/lpautomacoesesolucoes/" target="_blank" class="btn-contato instagram">
+                                <i class="fab fa-instagram"></i> Seguir no Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Email -->
+                    <div class="contato-card">
+                        <div class="card-header">
+                            <div class="card-icon email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>E-mail</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Envie um e-mail para nossa equipe</p>
+                            <p><span class="destaque">contato@lpautomacoes.com</span></p>
+                            <a href="mailto:contato@lpautomacoes.com" class="btn-contato email">
+                                <i class="fas fa-envelope"></i> Enviar E-mail
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Google Meu Negócio -->
+                    <div class="contato-card">
+                        <div class="card-header">
+                            <div class="card-icon google">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <h3 data-i18n="contato.google.titulo">Google Meu Negócio</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Avalie nossa empresa no Google</p>
+                            <p><span class="destaque">⭐ Avalie nosso trabalho</span></p>
+                            <a href="https://share.google/zbVt1het4mjmB38Cn" target="_blank" class="btn-contato google">
+                                <i class="fab fa-google"></i> Avaliar no Google
+                            </a>
                         </div>
                     </div>
                 </div>

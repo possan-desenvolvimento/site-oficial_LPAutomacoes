@@ -1,19 +1,128 @@
-// ========== MENU MOBILE COM CONTROLES CLONADOS ==========
+// ========================================
+// 1. DADOS DOS PROJETOS
+// ========================================
+const projetosData = {
+    'Sistema de Estoque': {
+        categoria: 'Sistemas',
+        img: 'https://images.pexels.com/photos/4482901/pexels-photo-4482901.jpeg?auto=compress&cs=tinysrgb&w=600',
+        descricao: 'Sistema completo de controle de estoque com leitor de código de barras integrado. Gerencie entradas, saídas, relatórios e muito mais diretamente pelo seu celular.',
+        features: [
+            '📱 Leitor de código de barras pelo celular',
+            '📊 Controle de entradas e saídas',
+            '📈 Relatórios automáticos em PDF',
+            '🔔 Alertas de estoque baixo',
+            '💬 Integração com WhatsApp para notificações',
+            '📱 Dashboard responsivo'
+        ],
+        diferencial: '🔥 Leitor de código de barras diretamente pelo celular - sem necessidade de equipamento externo! Economize milhares em equipamentos.',
+        link: '#'
+    },
+    'Avaliação Psicossocial': {
+        categoria: 'Sistemas',
+        img: 'https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600',
+        descricao: 'Sistema de avaliação psicossocial com formulários digitais, laudos automáticos e relatórios completos. Ideal para empresas de RH, psicólogos e profissionais da saúde.',
+        features: [
+            '📋 Formulários personalizados',
+            '📄 Laudos automáticos em PDF',
+            '📊 Dashboards com indicadores',
+            '📅 Histórico de avaliações',
+            '📈 Relatórios gerenciais',
+            '🔒 Dados seguros e criptografados'
+        ],
+        diferencial: '📋 Geração automática de laudos e relatórios com base nas respostas dos formulários! Reduza o tempo de análise em até 80%.',
+        link: '#'
+    },
+    'ERP Personalizado': {
+        categoria: 'Sistemas',
+        img: 'https://images.pexels.com/photos/442152/pexels-photo-442152.jpeg?auto=compress&cs=tinysrgb&w=600',
+        descricao: 'Sistema ERP completo e personalizado para sua empresa. Gestão financeira, vendas, estoque, RH e muito mais em uma única plataforma integrada.',
+        features: [
+            '💰 Gestão financeira completa',
+            '🛒 Controle de vendas e clientes',
+            '📦 Módulo de estoque integrado',
+            '🤖 Automação de processos',
+            '🔗 Integração com WhatsApp e redes sociais',
+            '📊 Relatórios gerenciais em tempo real'
+        ],
+        diferencial: '⚡ Sistema totalmente integrado com automações! Tudo em um só lugar, com dados em tempo real.',
+        link: '#'
+    },
+    'Automação WhatsApp': {
+        categoria: 'whatsapp',
+        img: 'https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=600',
+        descricao: 'Automação completa para WhatsApp com chatbots inteligentes, disparos em massa, atendimento 24/7 e gestão de múltiplos números.',
+        features: [
+            '🤖 Chatbots com IA integrada',
+            '📤 Disparos em massa personalizados',
+            '📅 Agendamento de mensagens',
+            '📊 Relatórios de atendimento',
+            '🔄 Respostas automáticas',
+            '📱 Gestão de múltiplos números'
+        ],
+        diferencial: '🤖 Atendimento 24/7 com IA - Reduza o tempo de resposta em até 70% e nunca mais perca um cliente!',
+        link: '#'
+    },
+    'Automação Instagram': {
+        categoria: 'instagram',
+        img: 'https://images.pexels.com/photos/6567367/pexels-photo-6567367.jpeg?auto=compress&cs=tinysrgb&w=600',
+        descricao: 'Automação inteligente para Instagram com respostas automáticas a comentários, mensagens diretas personalizadas e gestão de interações.',
+        features: [
+            '💬 Respostas automáticas a comentários',
+            '📩 DMs personalizados automatizados',
+            '📊 Análise de engajamento',
+            '🔄 Gestão de interações',
+            '📅 Agendamento de posts',
+            '📈 Relatórios de performance'
+        ],
+        diferencial: '📱 IA conversacional para interações mais humanas e personalizadas. Aumente seu engajamento em até 300%!',
+        link: '#'
+    },
+    'Site Corporativo': {
+        categoria: 'sites',
+        img: 'https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=600',
+        descricao: 'Site moderno, responsivo e otimizado para conversão. Design profissional que transmite credibilidade e autoridade para sua marca.',
+        features: [
+            '🎨 Design moderno e personalizado',
+            '📱 Totalmente responsivo',
+            '🚀 Otimizado para SEO',
+            '⚡ Carregamento ultrarrápido',
+            '🔗 Integração com redes sociais',
+            '📊 Analytics integrado'
+        ],
+        diferencial: '🚀 Sites otimizados para conversão e SEO - Apareça no Google e converta mais visitantes em clientes!',
+        link: '#'
+    },
+    'E-commerce Completo': {
+        categoria: 'sites',
+        img: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=600',
+        descricao: 'Loja virtual completa com carrinho de compras, integração com pagamentos e automações. Venda 24/7 com total segurança.',
+        features: [
+            '🛒 Carrinho de compras completo',
+            '💳 Integração com gateways de pagamento',
+            '📦 Controle de estoque integrado',
+            '💬 Notificações WhatsApp automáticas',
+            '📊 Relatórios de vendas',
+            '🔒 Segurança e SSL integrados'
+        ],
+        diferencial: '🛒 Integração total com WhatsApp para notificações de vendas e suporte ao cliente!',
+        link: '#'
+    }
+};
+
+// ========================================
+// 2. MENU MOBILE COM CONTROLES CLONADOS
+// ========================================
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navMenu = document.querySelector('.nav-menu');
 const body = document.body;
 
-// Função para clonar os controles (tema e idioma) para dentro do menu mobile
 function addControlsToMobileMenu() {
-    // Só adiciona se estiver no mobile (largura <= 768px)
     if (window.innerWidth > 768) return;
     
     const navControls = document.querySelector('.nav-controls');
     const mobileNavMenu = document.querySelector('.nav-menu');
     
-    // Verifica se existe e se já não foi adicionado
     if (navControls && mobileNavMenu && !mobileNavMenu.querySelector('.mobile-nav-controls')) {
-        // Clona os controles
         const clonedControls = navControls.cloneNode(true);
         clonedControls.classList.add('mobile-nav-controls');
         clonedControls.style.display = 'flex';
@@ -27,7 +136,6 @@ function addControlsToMobileMenu() {
         
         mobileNavMenu.appendChild(clonedControls);
         
-        // Reatribuir evento do tema no clone
         const clonedThemeBtn = clonedControls.querySelector('#theme-toggle');
         if (clonedThemeBtn) {
             clonedThemeBtn.addEventListener('click', () => {
@@ -37,7 +145,6 @@ function addControlsToMobileMenu() {
             });
         }
         
-        // Reatribuir eventos dos idiomas no clone
         const clonedLangBtns = clonedControls.querySelectorAll('.lang-btn');
         clonedLangBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -47,7 +154,6 @@ function addControlsToMobileMenu() {
     }
 }
 
-// Função para remover controles do menu mobile
 function removeMobileControls() {
     const mobileControls = document.querySelector('.mobile-nav-controls');
     if (mobileControls) {
@@ -119,7 +225,9 @@ window.addEventListener('resize', () => {
     }
 });
 
-// ========== TEMA ==========
+// ========================================
+// 3. TEMA
+// ========================================
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = themeToggle?.querySelector('i');
 
@@ -128,6 +236,7 @@ function setTheme(theme) {
     if (themeLink) {
         themeLink.href = `../css/${theme}-theme.css`;
     }
+    document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     
     if (themeIcon) {
@@ -167,7 +276,9 @@ if (themeToggle) {
     });
 }
 
-// ========== IDIOMAS ==========
+// ========================================
+// 4. IDIOMAS
+// ========================================
 const languages = {
     'pt-BR': '../locales/pt-BR.json',
     'en-US': '../locales/en-US.json',
@@ -223,7 +334,9 @@ function initLanguage() {
     updateLanguage(currentLang);
 }
 
-// ========== FILTRO DE PROJETOS ==========
+// ========================================
+// 5. FILTRO DE PROJETOS
+// ========================================
 const filtrosBtns = document.querySelectorAll('.filtro-btn');
 const projetosCards = document.querySelectorAll('.projeto-card');
 
@@ -252,7 +365,77 @@ filtrosBtns.forEach(btn => {
     });
 });
 
-// ========== ANIMAÇÃO DE ENTRADA ==========
+// ========================================
+// 6. SISTEMA DE MODAL
+// ========================================
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modalClose');
+const modalImg = document.getElementById('modalImg');
+const modalCategoria = document.getElementById('modalCategoria');
+const modalTitulo = document.getElementById('modalTitulo');
+const modalDescricao = document.getElementById('modalDescricao');
+const modalFeatures = document.getElementById('modalFeatures');
+const modalDiferencial = document.getElementById('modalDiferencial');
+const modalLink = document.getElementById('modalLink');
+
+// Abrir modal
+function openModal(projetoId) {
+    const projeto = projetosData[projetoId];
+    if (!projeto) return;
+    
+    modalImg.src = projeto.img;
+    modalImg.alt = projetoId;
+    modalCategoria.textContent = projeto.categoria;
+    modalTitulo.textContent = projetoId;
+    modalDescricao.textContent = projeto.descricao;
+    
+    // Limpar e preencher features
+    modalFeatures.innerHTML = '';
+    projeto.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.innerHTML = feature;
+        modalFeatures.appendChild(li);
+    });
+    
+    modalDiferencial.querySelector('p').textContent = projeto.diferencial;
+    modalLink.href = projeto.link;
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Fechar modal
+function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Evento de clique nos cards
+document.querySelectorAll('.projeto-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const titulo = card.querySelector('h3').textContent;
+        openModal(titulo);
+    });
+});
+
+// Eventos de fechamento
+modalClose.addEventListener('click', closeModal);
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// ========================================
+// 7. ANIMAÇÃO DE ENTRADA
+// ========================================
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -274,7 +457,9 @@ document.querySelectorAll('.projeto-card, .cliente-card').forEach(el => {
     observer.observe(el);
 });
 
-// ========== HEADER SCROLL ==========
+// ========================================
+// 8. HEADER SCROLL
+// ========================================
 const header = document.querySelector('.header');
 if (header) {
     window.addEventListener('scroll', () => {
@@ -286,7 +471,9 @@ if (header) {
     });
 }
 
-// ========== INICIALIZAÇÃO ==========
+// ========================================
+// 9. INICIALIZAÇÃO
+// ========================================
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initLanguage();

@@ -1,4 +1,6 @@
-/* ========== VARIÁVEIS ========== */
+/* ========================================
+   1. VARIÁVEIS E RESET
+   ======================================== */
 :root {
     --primary: #6366f1;
     --primary-dark: #4f46e5;
@@ -11,7 +13,10 @@
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 60px rgba(99, 102, 241, 0.3);
     --transition: all 0.3s ease;
+    --radius: 16px;
+    --radius-full: 50%;
 }
 
 * {
@@ -33,7 +38,9 @@ body {
     padding: 0 var(--spacing-md);
 }
 
-/* ========== HEADER ========== */
+/* ========================================
+   2. HEADER
+   ======================================== */
 .header {
     position: fixed;
     top: 0;
@@ -53,6 +60,7 @@ body {
     padding: var(--spacing-sm) var(--spacing-md);
 }
 
+/* ---------- LOGO ---------- */
 .logo {
     display: flex;
     align-items: center;
@@ -62,16 +70,33 @@ body {
     color: var(--text-primary);
 }
 
+.logo-img {
+    height: 2.2rem;
+    width: 2.2rem;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--primary);
+    padding: 2px;
+    background: var(--bg-primary);
+    transition: var(--transition);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
 .logo i {
-    color: var(--primary);
-    font-size: 1.8rem;
+    display: none;
 }
 
 .logo .highlight {
     color: var(--primary);
 }
 
-/* ========== NAVEGAÇÃO DESKTOP ========== */
+/* ---------- NAVEGAÇÃO ---------- */
 .nav-menu ul {
     display: flex;
     gap: var(--spacing-md);
@@ -90,7 +115,7 @@ body {
     color: var(--primary);
 }
 
-/* ========== CONTROLES (TEMA E IDIOMA) ========== */
+/* ---------- CONTROLES ---------- */
 .nav-controls {
     display: flex;
     align-items: center;
@@ -102,7 +127,7 @@ body {
     border: none;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     cursor: pointer;
     transition: var(--transition);
     color: var(--text-primary);
@@ -140,7 +165,7 @@ body {
     background: var(--primary);
 }
 
-/* ========== BOTÃO MOBILE ========== */
+/* ---------- MOBILE MENU ---------- */
 .mobile-menu-btn {
     display: none;
     font-size: 1.5rem;
@@ -154,7 +179,6 @@ body {
     z-index: 1002;
 }
 
-/* ========== MENU MOBILE (SIDEBAR) ========== */
 @media (max-width: 768px) {
     .nav-controls {
         display: none;
@@ -210,10 +234,14 @@ body {
     }
 }
 
-/* ========== CONTATO SECTION ========== */
+/* ========================================
+   3. CONTATO SECTION
+   ======================================== */
 .contato {
     padding: 120px 0 var(--spacing-xl);
     min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .section-header {
@@ -239,174 +267,328 @@ body {
     color: var(--text-secondary);
 }
 
-/* ========== GRID CONTATO ========== */
+/* ========================================
+   4. GRID CONTATO
+   ======================================== */
 .contato-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
+    align-items: start;
 }
 
-/* ========== LADO ESQUERDO - INFO CARDS ========== */
-.contato-info {
+/* ========================================
+   5. LADO ESQUERDO - FOTO (STICKY + FLUTUANTE)
+   ======================================== */
+.contato-foto {
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: fit-content;
+    min-height: 550px;
+}
+
+/* ---------- Container da Imagem ---------- */
+.foto-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    transition: var(--transition);
+    animation: float 3s ease-in-out infinite;
+    border: 4px solid var(--primary);
+}
+
+/* Animação de Flutuação */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* ---------- Borda com Gradiente Animado ---------- */
+.foto-container::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--primary));
+    background-size: 300% 300%;
+    z-index: -1;
+    animation: gradientMove 4s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* ---------- Imagem ---------- */
+.foto-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.foto-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 30px 80px rgba(99, 102, 241, 0.5);
+}
+
+.foto-container:hover img {
+    transform: scale(1.1);
+}
+
+/* ---------- Overlay ---------- */
+.foto-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(0deg, rgba(99,102,241,0.9) 0%, rgba(99,102,241,0) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: var(--spacing-md);
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.foto-container:hover .foto-overlay {
+    transform: translateY(0);
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.foto-container:hover .overlay-content {
+    opacity: 1;
+}
+
+.overlay-content i {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xs);
+    display: block;
+}
+
+.overlay-content p {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* ---------- Elementos Decorativos ---------- */
+.contato-foto::before {
+    content: '';
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: var(--radius-full);
+    background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%);
+    animation: float 3.5s ease-in-out infinite reverse;
+    z-index: 0;
+}
+
+.contato-foto::after {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: var(--radius-full);
+    border: 2px dashed var(--primary);
+    opacity: 0.3;
+    animation: spin 20s linear infinite;
+    z-index: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   6. LADO DIREITO - CARDS DE CONTATO
+   ======================================== */
+.contato-cards {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
 }
 
-.info-card {
+/* ---------- Card Individual ---------- */
+.contato-card {
     background: var(--bg-secondary);
-    border-radius: 20px;
+    border-radius: var(--radius);
     padding: var(--spacing-md);
     transition: var(--transition);
     box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--primary);
+    position: relative;
+    overflow: hidden;
 }
 
-.info-card:hover {
-    transform: translateY(-5px);
+.contato-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(99,102,241,0.05) 0%, transparent 100%);
+    border-radius: var(--radius-full);
+}
+
+.contato-card:hover {
+    transform: translateX(10px);
     box-shadow: var(--shadow-lg);
 }
 
-.info-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    border-radius: 50%;
+.contato-card .card-header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
 }
 
-.info-icon i {
-    font-size: 1.8rem;
+.contato-card .card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
     color: white;
+    flex-shrink: 0;
 }
 
-.info-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: var(--spacing-xs);
+.contato-card .card-icon.whatsapp {
+    background: #25D366;
+}
+
+.contato-card .card-icon.instagram {
+    background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
+}
+
+.contato-card .card-icon.email {
+    background: #EA4335;
+}
+
+.contato-card .card-icon.endereco {
+    background: var(--primary);
+}
+
+.contato-card .card-icon.google {
+    background: #DB4437;
+}
+
+.contato-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
     color: var(--text-primary);
+    margin: 0;
 }
 
-.info-card p {
+.contato-card .card-content {
+    padding-left: calc(50px + var(--spacing-sm));
+}
+
+.contato-card .card-content p {
     color: var(--text-secondary);
     margin-bottom: 5px;
     line-height: 1.6;
 }
 
-/* ========== BOTÕES DE CONTATO ========== */
-.btn-mapa, .btn-whatsapp, .btn-instagram, .btn-google {
+.contato-card .card-content .destaque {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ---------- Botões dos Cards ---------- */
+.btn-contato {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    margin-top: var(--spacing-sm);
+    font-size: 0.9rem;
+    margin-top: var(--spacing-xs);
     transition: var(--transition);
     border: none;
     cursor: pointer;
 }
 
-.btn-mapa {
-    background: var(--primary);
-    color: white;
-}
-
-.btn-mapa:hover {
-    background: var(--primary-dark);
+.btn-contato:hover {
     transform: translateX(5px);
 }
 
-.btn-whatsapp {
+.btn-contato.whatsapp {
     background: #25D366;
     color: white;
 }
 
-.btn-whatsapp:hover {
+.btn-contato.whatsapp:hover {
     background: #128C7E;
-    transform: translateX(5px);
 }
 
-.btn-instagram {
+.btn-contato.instagram {
     background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
     color: white;
 }
 
-.btn-instagram:hover {
-    transform: translateX(5px);
+.btn-contato.instagram:hover {
     filter: brightness(1.05);
 }
 
-.btn-google {
+.btn-contato.google {
     background: #DB4437;
     color: white;
 }
 
-.btn-google:hover {
+.btn-contato.google:hover {
     background: #C53929;
-    transform: translateX(5px);
 }
 
-/* ========== LADO DIREITO - MAPA ========== */
-.contato-mapa {
-    position: sticky;
-    top: 100px;
-    height: fit-content;
+.btn-contato.mapa {
+    background: var(--primary);
+    color: white;
 }
 
-.mapa-card {
-    background: var(--bg-secondary);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
+.btn-contato.mapa:hover {
+    background: var(--primary-dark);
 }
 
-.mapa-card h3 {
-    padding: var(--spacing-md);
-    margin: 0;
-    text-align: center;
-    color: var(--text-primary);
+.btn-contato.email {
+    background: #EA4335;
+    color: white;
 }
 
-.mapa-container {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
+.btn-contato.email:hover {
+    background: #C53929;
 }
 
-.mapa-container iframe {
-    width: 100%;
-    height: 100%;
-}
-
-.horario-atendimento {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md);
-    background: var(--bg-primary);
-    border-top: 1px solid var(--border-color);
-}
-
-.horario-atendimento i {
-    font-size: 2rem;
-    color: var(--primary);
-}
-
-.horario-atendimento strong {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--text-primary);
-}
-
-.horario-atendimento p {
-    color: var(--text-secondary);
-    margin: 0;
-}
-
-/* ========== FOOTER ========== */
+/* ========================================
+   7. FOOTER
+   ======================================== */
 .footer {
     background: var(--bg-secondary);
     padding: var(--spacing-lg) 0;
@@ -414,17 +596,46 @@ body {
     margin-top: var(--spacing-xl);
 }
 
-/* ========== RESPONSIVO ========== */
+/* ========================================
+   8. RESPONSIVO
+   ======================================== */
+
+/* ---------- Tablets ---------- */
 @media (max-width: 1024px) {
     .contato {
         padding: 100px 0 var(--spacing-lg);
     }
     
+    .contato-grid {
+        gap: var(--spacing-lg);
+    }
+    
     .section-header h2 {
         font-size: 2.2rem;
     }
+    
+    .foto-container {
+        width: 320px;
+        height: 320px;
+    }
+    
+    .contato-foto::before {
+        width: 380px;
+        height: 380px;
+    }
+    
+    .contato-foto::after {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .contato-foto {
+        top: 90px;
+        min-height: 450px;
+    }
 }
 
+/* ---------- Mobile Grande ---------- */
 @media (max-width: 768px) {
     .contato {
         padding: 90px 0 var(--spacing-lg);
@@ -435,28 +646,53 @@ body {
         gap: var(--spacing-lg);
     }
     
-    .contato-mapa {
-        position: static;
+    .contato-foto {
+        position: relative;
+        top: 0;
+        min-height: auto;
+        padding: 10px;
     }
     
-    .mapa-container {
+    .foto-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .contato-foto::before {
+        width: 300px;
         height: 300px;
+    }
+    
+    .contato-foto::after {
+        width: 220px;
+        height: 220px;
     }
     
     .section-header h2 {
         font-size: 1.8rem;
     }
     
-    .info-card h3 {
-        font-size: 1.1rem;
+    .contato-card {
+        padding: var(--spacing-sm);
     }
     
-    .btn-mapa, .btn-whatsapp, .btn-instagram, .btn-google {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
+    .contato-card .card-content {
+        padding-left: 0;
+        margin-top: var(--spacing-xs);
+    }
+    
+    .contato-card .card-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .btn-contato {
+        width: 100%;
+        justify-content: center;
     }
 }
 
+/* ---------- Mobile Pequeno ---------- */
 @media (max-width: 480px) {
     .contato {
         padding: 80px 0 var(--spacing-md);
@@ -466,17 +702,24 @@ body {
         font-size: 1.5rem;
     }
     
-    .mapa-container {
-        height: 250px;
+    .foto-container {
+        width: 200px;
+        height: 200px;
     }
     
-    .horario-atendimento {
-        flex-direction: column;
-        text-align: center;
+    .contato-foto::before {
+        width: 240px;
+        height: 240px;
     }
-}
-
-/* ========== FILTRO PARA O MAPA NO TEMA ESCURO ========== */
-body.dark-theme .mapa-container iframe {
-    filter: invert(1) hue-rotate(180deg);
+    
+    .contato-foto::after {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .contato-card .card-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
 }
