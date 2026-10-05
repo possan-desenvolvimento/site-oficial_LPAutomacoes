@@ -1,153 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LP Automações & Soluções</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/light-theme.css" id="theme-style">
-
-    <!-- Font Awesome -->
+    <meta name="description" content="LP Automações & Soluções: sistemas web sob medida, sites profissionais e automações para conectar processos e impulsionar seu negócio.">
+    <meta name="theme-color" content="#101414">
+    <title>LP Automações & Soluções | Tecnologia sob medida</title>
+    <link rel="icon" href="assets/logo-lp.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="css/landing.css">
+    <script src="js/landing.js" defer></script>
 </head>
-
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="assets/logo-lp.png" alt="LP Automações" class="logo-img">
-                <span>LP <span class="highlight">Automações</span></span>
+    <a class="skip-link" href="#solucoes">Ir para o conteúdo</a>
+    <header class="header"><div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="LP Automações, início"><img src="assets/logo-lp.png" alt="" width="44" height="44"><span>LP <b>Automações</b><small>& SOLUÇÕES</small></span></a>
+        <nav id="main-nav" aria-label="Navegação principal"><a href="#inicio" data-copy="home" class="active" aria-current="location">Início</a><a href="#solucoes" data-copy="solutions">Soluções</a><a href="#sobre" data-copy="about">Sobre</a><a href="#projetos" data-copy="projects">Projetos</a><a href="#contato" data-copy="contact">Contato</a></nav>
+        <div class="header-controls"><select id="language" aria-label="Idioma" title="Idioma"><option value="pt-BR">PT</option><option value="en-US">EN</option><option value="es-ES">ES</option></select><button id="theme-toggle" class="icon-button" aria-label="Alternar tema" title="Alternar tema"><i class="fa-solid fa-sun" aria-hidden="true"></i></button><button id="menu-toggle" class="icon-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button></div>
+    </div></header>
+    <main>
+        <section id="inicio" class="hero" aria-labelledby="hero-title">
+            <img class="hero-image" src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Ambiente de trabalho com desenvolvimento de software" fetchpriority="high">
+            <div class="hero-shade"></div>
+            <div class="container hero-content"><div class="eyebrow"><span class="status-mark"></span><span data-copy="eyebrow">TECNOLOGIA QUE CONECTA NEGÓCIOS</span></div><h1 id="hero-title">LP Automações<br><span>& Soluções</span><span class="hero-period">.</span></h1><p class="hero-description" data-copy="hero">Menos processos manuais. Mais possibilidades. Desenvolvemos sistemas, sites e automações que trabalham junto com a sua empresa.</p><div class="actions"><a class="button primary" href="#contato"><span data-copy="start">Vamos tirar sua ideia do papel</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a class="text-link" href="#projetos"><span data-copy="see">Conheça nossos projetos</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></div><div class="hero-bottom"><span data-copy="custom">SOB MEDIDA. DO COMEÇO AO PRÓXIMO PASSO.</span><a href="#solucoes" aria-label="Ver soluções"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></div></div>
+        </section>
+        <div class="capabilities"><div class="container"><span><i class="fa-solid fa-code" aria-hidden="true"></i><span data-copy="web">Sistemas web</span></span><span><i class="fa-solid fa-diagram-project" aria-hidden="true"></i><span data-copy="automation">Automação inteligente</span></span><span><i class="fa-solid fa-globe" aria-hidden="true"></i><span data-copy="presence">Presença digital</span></span><span><i class="fa-solid fa-plug" aria-hidden="true"></i><span data-copy="integrations">Integrações</span></span></div></div>
+        <section id="solucoes" class="section" aria-labelledby="solutions-title"><div class="container">
+            <div class="section-heading"><div><span class="section-index">01 / <span data-copy="solutions">Soluções</span></span><h2 id="solutions-title" data-copy="solutionsTitle">A tecnologia certa.<br>Para o seu próximo passo.</h2></div><p data-copy="solutionsIntro">Da primeira presença online aos processos mais complexos: soluções pensadas para o seu negócio, não o contrário.</p></div>
+            <div class="services"><article class="service"><i class="fa-solid fa-terminal" aria-hidden="true"></i><span class="service-number">01</span><h3 data-copy="systems">Sistemas personalizados</h3><p data-copy="systemsDesc">Estoque, vendas, ERP, CRM e avaliações psicossociais. Sua operação organizada em uma solução sob medida.</p></article><article class="service"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i><span class="service-number">02</span><h3 data-copy="sites">Sites & e-commerce</h3><p data-copy="sitesDesc">Sites responsivos e lojas virtuais que apresentam sua marca com clareza e aproximam clientes do seu negócio.</p></article><article class="service"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span class="service-number">03</span><h3 data-copy="social">WhatsApp & Instagram</h3><p data-copy="socialDesc">Fluxos de atendimento, respostas automáticas e integrações para reduzir tarefas repetitivas e conectar conversas.</p></article><article class="service"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span class="service-number">04</span><h3 data-copy="google">Presença no Google</h3><p data-copy="googleDesc">Perfil da empresa, informações atualizadas e gestão de avaliações para ajudar seus clientes a encontrar você.</p></article></div>
+            <div class="section-bottom"><span data-copy="notSure">Ainda não sabe qual solução precisa?</span><a href="#contato" class="text-link"><span data-copy="talk">Vamos conversar</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+        </div></section>
+        <section id="sobre" class="section about-section" aria-labelledby="about-title"><div class="container about-grid"><figure class="portrait">
+            <div class="portrait-media">
+                <img src="assets/eu-tatto.jpeg" alt="Leonardo Possan, LP Automações" loading="lazy">
             </div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Início</a></li>
-                    <li><a href="pages/sobre.html" class="nav-link" data-i18n="nav.sobre">Sobre</a></li>
-                    <li><a href="pages/projetos.html" class="nav-link" data-i18n="nav.projetos">Projetos</a></li>
-                    <li><a href="pages/contato.html" class="nav-link" data-i18n="nav.contato">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="nav-controls">
-                <button id="theme-toggle" class="control-btn">
-                    <i class="fas fa-sun"></i>
-                </button>
-                <div class="language-selector">
-                    <button class="lang-btn" data-lang="pt-BR" title="Português">🇧🇷</button>
-                    <button class="lang-btn" data-lang="en-US" title="English">🇺🇸</button>
-                    <button class="lang-btn" data-lang="es-ES" title="Español">🇪🇸</button>
-                </div>
-            </div>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section com Slides Automáticos -->
-    <section class="hero">
-        <!-- Slide 1 -->
-        <div class="hero-slide active" data-slide="1">
-            <img class="slide-bg"
-                src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Tecnologia">
-            <div class="hero-content">
-                <h1 data-i18n="hero.slide1.titulo">LP <span class="gradient-text">Automações & Soluções</span></h1>
-                <div class="typing-container">
-                    <span data-i18n="hero.typing.prefix">Especialistas em</span>
-                    <span id="typed-text"></span>
-                </div>
-                <div class="hero-buttons">
-                    <a href="pages/contato.html" class="btn btn-primary" data-i18n="hero.btn_contato">Fale Conosco</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="hero-slide" data-slide="2">
-            <img class="slide-bg"
-                src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="WhatsApp">
-            <div class="hero-content">
-                <h1 data-i18n="hero.slide2.titulo">Automação <span class="gradient-text">WhatsApp</span></h1>
-                <p data-i18n="hero.slide2.desc">Atendimento 24/7 com inteligência artificial</p>
-                <div class="hero-buttons">
-                    <a href="pages/contato.html" class="btn btn-primary" data-i18n="hero.btn_contato">Fale Conosco</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="hero-slide" data-slide="3">
-            <img class="slide-bg"
-                src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Sistemas">
-            <div class="hero-content">
-                <h1 data-i18n="hero.slide3.titulo">Sistemas <span class="gradient-text">Personalizados</span></h1>
-                <p data-i18n="hero.slide3.desc">Controle de estoque, vendas e gestão empresarial</p>
-                <div class="hero-buttons">
-                    <a href="pages/contato.html" class="btn btn-primary" data-i18n="hero.btn_contato">Solicitar
-                        Orçamento</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="hero-slide" data-slide="4">
-            <img class="slide-bg"
-                src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Google">
-            <div class="hero-content">
-                <h1 data-i18n="hero.slide4.titulo">Google <span class="gradient-text">Meu Negócio</span></h1>
-                <p data-i18n="hero.slide4.desc">Destaque sua empresa nas buscas locais</p>
-                <div class="hero-buttons">
-                    <a href="pages/contato.html" class="btn btn-primary" data-i18n="hero.btn_contato">Quero Mais
-                        Visibilidade</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 5 -->
-        <div class="hero-slide" data-slide="5">
-            <img class="slide-bg"
-                src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Resultados">
-            <div class="hero-content">
-                <h1 data-i18n="hero.slide5.titulo">Resultados <span class="gradient-text">Reais</span></h1>
-                <p data-i18n="hero.slide5.desc">Transformamos seu negócio com tecnologia</p>
-                <div class="hero-buttons">
-                    <a href="pages/contato.html" class="btn btn-primary" data-i18n="hero.btn_contato">Quero
-                        Resultados</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dots de Navegação (sem setas) -->
-        <div class="slide-controls">
-            <div class="slide-dot active" data-slide="1"></div>
-            <div class="slide-dot" data-slide="2"></div>
-            <div class="slide-dot" data-slide="3"></div>
-            <div class="slide-dot" data-slide="4"></div>
-            <div class="slide-dot" data-slide="5"></div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 LP Automações & Soluções - <span data-i18n="footer.rights">Todos os direitos
-                    reservados</span></p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="js/index.js"></script>
+            <figcaption>Leonardo Possan <span data-copy="founder">À frente da LP Automações</span></figcaption>
+        </figure><div class="about-copy"><span class="section-index">02 / <span data-copy="about">Sobre</span></span><h2 id="about-title" data-copy="aboutTitle">Tecnologia de verdade.<br>Com gente por trás.</h2><p data-copy="aboutText">A LP Automações & Soluções nasceu para tornar a tecnologia acessível a pequenas, médias e grandes empresas. Acreditamos em entender o seu dia a dia antes de escrever a primeira linha de código.</p><p data-copy="aboutMore">Mais do que entregar um site ou sistema, conectamos processos, simplificamos rotinas e construímos soluções que acompanham o crescimento do seu negócio.</p><ul class="values"><li><i class="fa-solid fa-check" aria-hidden="true"></i><span data-copy="tailored">Soluções sob medida</span></li><li><i class="fa-solid fa-check" aria-hidden="true"></i><span data-copy="support">Suporte especializado</span></li><li><i class="fa-solid fa-check" aria-hidden="true"></i><span data-copy="focus">Foco em resultados</span></li><li><i class="fa-solid fa-check" aria-hidden="true"></i><span data-copy="trust">Segurança e confiança</span></li></ul></div></div></section>
+        <section id="projetos" class="section" aria-labelledby="projects-title"><div class="container"><div class="section-heading"><div><span class="section-index">03 / <span data-copy="projects">Projetos</span></span><h2 id="projects-title" data-copy="projectsTitle">Ideias que viram<br>soluções na prática.</h2></div><p data-copy="projectsIntro">Explore sistemas, experiências digitais e automações desenvolvidos para diferentes necessidades.</p></div><div class="filters" role="group" aria-label="Filtrar projetos"><button data-filter="all" aria-pressed="true" class="active" data-copy="all">Todos</button><button data-filter="sistemas" aria-pressed="false" data-copy="web">Sistemas web</button><button data-filter="sites" aria-pressed="false" data-copy="sites">Sites & e-commerce</button><button data-filter="automacao" aria-pressed="false" data-copy="automation">Automação inteligente</button></div><div id="project-grid" class="project-grid"></div><p id="project-count" class="sr-only" aria-live="polite"></p><div class="clients"><span class="section-index" data-copy="clients">ALGUMAS EMPRESAS QUE CONFIAM NO NOSSO TRABALHO</span><div><span>Grupo Soul</span><span>Proven Consultoria</span><span>Projeto e Print</span><span>Mazziote Calçados</span><span>Impercol</span><span>MK Impermeabilização</span><span>Cynd Fit</span><span>Cantinho dos Bichos</span></div></div></div></section>
+        <section id="contato" class="section contact-section" aria-labelledby="contact-title"><div class="container"><span class="section-index">04 / <span data-copy="contact">Contato</span></span><div class="contact-grid"><div><h2 id="contact-title" data-copy="contactTitle">Seu próximo projeto<br>começa com uma conversa.</h2><p data-copy="contactIntro">Conte o que sua empresa precisa. Vamos entender o desafio e encontrar o melhor caminho juntos.</p><a class="button primary" href="https://wa.me/5511964801185" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span data-copy="whatsapp">Falar no WhatsApp</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><p class="phone">(11) 96480-1185</p></div><div class="contact-links"><a href="mailto:contato@lpautomacoes.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span><small>E-mail</small>contato@lpautomacoes.com</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a href="https://www.instagram.com/lpautomacoesesolucoes/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span><small>Instagram</small>@lpautomacoesesolucoes</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://maps.google.com/?q=Francisco+de+Almeida,179,Itapevi,SP" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span><small data-copy="address">Onde estamos</small>Francisco de Almeida, 179<br>Itapevi · São Paulo · 06657-130</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://share.google/zbVt1het4mjmB38Cn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google" aria-hidden="true"></i><span data-copy="review">Avalie nosso trabalho no Google</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></div></section>
+    </main>
+    <footer><div class="container footer-inner"><a class="footer-brand" href="#inicio">LP Automações <span>& Soluções</span></a><p>© 2026 LP Automações & Soluções. <span data-copy="rights">Todos os direitos reservados.</span></p><a href="#inicio" class="icon-button" aria-label="Voltar ao início" title="Voltar ao início"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a></div></footer>
+    <dialog id="project-dialog" aria-labelledby="dialog-title"><button class="icon-button dialog-close" id="dialog-close" aria-label="Fechar detalhes"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><img id="dialog-image" alt=""><div class="dialog-content"><span id="dialog-category" class="section-index"></span><h2 id="dialog-title"></h2><p id="dialog-description"></p><ul id="dialog-features"></ul><a href="#contato" class="button primary" id="dialog-contact" data-copy="similar">Quero uma solução assim</a></div></dialog>
 </body>
-
 </html>
